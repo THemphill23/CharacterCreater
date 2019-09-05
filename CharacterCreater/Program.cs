@@ -41,6 +41,15 @@ namespace CharacterCreater
                     Console.WriteLine("Choose your background:");
                     Console.WriteLine("Thief Assassin");
                     string backRouge = Console.ReadLine();
+                    bool backThief = backRouge.Equals("Thief");
+                    if (backThief)
+                    {
+                        Console.WriteLine("Your weapon is a Whip.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your weapon is a Dagger");
+                    }
                     break;
 
                 case "Mage":
@@ -48,6 +57,15 @@ namespace CharacterCreater
                     Console.WriteLine("Choose your background");
                     Console.WriteLine("Sorcerer Wizard");
                     string backMage = Console.ReadLine();
+                    bool backSorcerer = backMage.Equals("Sorcerer");
+                    if (backSorcerer)
+                    {
+                        Console.WriteLine("Your have inate magical powers.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your studied to gain magical powers.");
+                    }
                     break;
 
                 default:
