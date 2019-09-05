@@ -23,12 +23,17 @@ namespace CharacterCreater
                 case "Fighter":
                     Console.WriteLine();
                     Console.WriteLine("Choose your background");
-                    Console.WriteLine("Soldier Mercenary");
+                    Console.WriteLine("Soldier Mercenary Chosen");
                     string backFighter = Console.ReadLine();
                     bool backSoldier = backFighter.Equals("Soldier");
+                    bool backChosen = backFighter.Equals("Chosen");
                     if (backSoldier)
                     {
                         Console.WriteLine("Your weapon is a Sword and Shield.");
+                    }
+                    else if (backChosen)
+                    {
+                        Console.WriteLine("Your weapon is a Hammer.");
                     }
                     else
                     {
@@ -39,12 +44,18 @@ namespace CharacterCreater
                 case "Rouge":
                     Console.WriteLine();
                     Console.WriteLine("Choose your background:");
-                    Console.WriteLine("Thief Assassin");
+                    Console.WriteLine("Thief Assassin Archer");
                     string backRouge = Console.ReadLine();
                     bool backThief = backRouge.Equals("Thief");
+                    bool backArcher = backRouge.Equals("Archer");
+                
                     if (backThief)
                     {
                         Console.WriteLine("Your weapon is a Whip.");
+                    }
+                    else if (backArcher)
+                    {
+                        Console.WriteLine("You weapon is a Bow and Arrows.");
                     }
                     else
                     {
@@ -55,12 +66,17 @@ namespace CharacterCreater
                 case "Mage":
                     Console.WriteLine();
                     Console.WriteLine("Choose your background");
-                    Console.WriteLine("Sorcerer Wizard");
+                    Console.WriteLine("Sorcerer Wizard Enchanter");
                     string backMage = Console.ReadLine();
                     bool backSorcerer = backMage.Equals("Sorcerer");
+                    bool backEnchanter = backMage.Equals("Enchanter");
                     if (backSorcerer)
                     {
                         Console.WriteLine("Your have inate magical powers.");
+                    }
+                    else if (backEnchanter)
+                    {
+                        Console.WriteLine("Your magical powers come from a magical item.");
                     }
                     else
                     {
@@ -72,6 +88,7 @@ namespace CharacterCreater
                     Console.WriteLine("Good Luck");
                     break;
             }
+          
 
             Console.WriteLine();
             Console.WriteLine(charName + " the " + className);
