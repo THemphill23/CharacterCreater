@@ -46,7 +46,6 @@ namespace CharacterCreater
             {
                 case "Fighter":
                     Console.WriteLine("Fighter: Straight into the fray attacker.");
-                    Console.WriteLine();
                     Console.WriteLine("Choose your specilization");
                     Console.WriteLine("Soldier, Mercenary, Chosen");
                     string specFighter = Console.ReadLine();
