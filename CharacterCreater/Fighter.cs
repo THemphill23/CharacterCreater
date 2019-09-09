@@ -14,6 +14,12 @@ namespace CharacterCreater
             get { return this.Weapon; }
             set { this.Weapon = value; }
         }
+
+        public string Armor
+        {
+            get { return this.Armor; }
+            set { this.Armor = value; }
+        }
         //Console.WriteLine("A tactical, front line attacker.");
         //Console.WriteLine("Your weapon is a Sword and Shield.");
     }

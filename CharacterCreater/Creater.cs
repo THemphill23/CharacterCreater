@@ -4,8 +4,10 @@ namespace CharacterCreater
 {
     public class Creater
     {
+
         static void Main(string[] args)
         {
+
             Console.WriteLine("Welcome Adventurer");
             Console.WriteLine();
             Console.WriteLine("Lets create your character.");
@@ -26,6 +28,11 @@ namespace CharacterCreater
             Console.WriteLine("Third Choose Your Class:");
             Console.WriteLine("Fighter, Barbarian, Sorcerer, Wizard, Assassin, Archer");
             string className = Console.ReadLine();
+
+            bool playerChoice(Fighter fighter)
+            {
+                return true;
+            }
 
             switch (className)
             {
@@ -66,7 +73,7 @@ namespace CharacterCreater
                     Console.WriteLine("Good Luck");
                     break;
             }
-           
+            
             Console.WriteLine();
             Console.WriteLine("You are a " + charRace + " " + className);
             Console.WriteLine("Enjoy your journey " + charName);
