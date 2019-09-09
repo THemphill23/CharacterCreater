@@ -2,7 +2,7 @@
 
 namespace CharacterCreater
 {
-    class Program
+    public class Creater
     {
         static void Main(string[] args)
         {
