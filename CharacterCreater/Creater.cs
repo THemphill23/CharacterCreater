@@ -4,9 +4,11 @@ namespace CharacterCreater
 {
     public class Creater
     {
+        
 
         static void Main(string[] args)
         {
+            Character myChar = new Character();
 
             Console.WriteLine("Welcome Adventurer");
             Console.WriteLine();
@@ -14,69 +16,62 @@ namespace CharacterCreater
             Console.WriteLine();
 
             
-            Console.WriteLine("First name your character");
+            Console.WriteLine("First, name your character");
             string charName = Console.ReadLine();
+            myChar.EnterName(charName);
             Console.WriteLine();
 
-            Console.WriteLine("Second Choose Your Race:");
-            Console.WriteLine("Human, Elf, Dwarf, Dragonborn");
-            string charRace = Console.ReadLine();
+            Console.WriteLine("Second, Choose Your Race:");
+            Console.WriteLine("Human, Elf, Dwarf");
+            string charRace = Console.ReadLine().ToLower();
+            myChar.ChooseRace(charRace);
+
+            switch (charRace)
+            {
+                case ("Human"):
+                    break;
+
+                case ("Elf"):
+                    break;
+
+                case ("Dwarf"):
+                    break;
+            }
             Console.WriteLine();
 
 
 
-            Console.WriteLine("Third Choose Your Class:");
-            Console.WriteLine("Fighter, Barbarian, Sorcerer, Wizard, Assassin, Archer");
-            string className = Console.ReadLine();
+            Console.WriteLine("Third, Choose Your Class:");
+            Console.WriteLine("Fighter, Mage, Rouge");
+            string charClass = Console.ReadLine().ToLower();
+            myChar.ChooseClass(charClass);
 
-            bool playerChoice(Fighter fighter)
+            switch (charClass)
             {
-                return true;
-            }
-
-            switch (className)
-            {
-                case "Fighter":
-                    Console.WriteLine("A tactical, front line attacker.");
-                    Console.WriteLine("Your weapon is a Sword and Shield.");
-                    Console.WriteLine();
+                 case ("fighter"):
+                    Console.WriteLine("");
+                    Console.WriteLine("Fighters use a sword and shield as weapons.");
                     break;
 
-                case "Barbarian":
-                    Console.WriteLine("A straight into the battle attacker.");
-                    Console.WriteLine("Your weapon is a Hammer.");
+                case ("mage"):
+                    Console.WriteLine("");
+                    Console.WriteLine("Mages use a magic inate to them.");
                     break;
 
-                case "Sorcerer":
-                    Console.WriteLine("Born with magic");
-                    Console.WriteLine();
-                    break;
-
-                case "Wizard":
-                    Console.WriteLine("Studied Magic");
-                    Console.WriteLine();
-                    break;
-
-                case "Assassin":
-                    Console.WriteLine("Uses stealth to deal damage.");
-                    Console.WriteLine("Your weapon is a Dagger.");
-                    Console.WriteLine();
-                    break;
-
-                case "Archer":
-                    Console.WriteLine("Fights from a distance.");
-                    Console.WriteLine("Your weapon is a Bow and Arrow.");
-                    break;
-
-                default:
-                    Console.WriteLine();
-                    Console.WriteLine("Good Luck");
+                case ("rouge"):
+                    Console.WriteLine("");
+                    Console.WriteLine("Rouges use a stealth and distance to fight.");
                     break;
             }
+                
             
+
+
             Console.WriteLine();
-            Console.WriteLine("You are a " + charRace + " " + className);
-            Console.WriteLine("Enjoy your journey " + charName);
+            Console.WriteLine("You are a " + myChar.CharRace + " " + myChar.CharClass);
+            Console.WriteLine("Enjoy your journey " + myChar.CharName);
+
+            
         }
     }
 }

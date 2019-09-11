@@ -16,19 +16,19 @@ namespace CharacterCreater.Tests
         {
             Name charName = new Name();
 
-            charName.firstName = "Tobias";
+            charName.firstName = myChar.CharName;
 
-            Assert.Equal("Tobias", charName.firstName);
+            Assert.Equal(charName.firstName);
         }
 
         [Fact]
-        public void Get_Returns_Fighter()
+        public void Character_Has_A_Class()
         {
-            var charName = new Fighter();
+            Class charClass = new Class();
 
-            var result = "Fighter";
+            charClass.className = myChar.CharClass;
 
-            Assert.Equal("Fighter", result);
+            Assert.Equal(charClass.className);
         }
     }
 }
