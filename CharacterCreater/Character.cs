@@ -6,24 +6,25 @@ namespace CharacterCreater
 {
     public class Character
     {
-        public string CharName { get; set; }
-        public string CharClass { get; set; }
-        public string CharRace { get; set; }
+        public string CharacterName { get; set; }
+        public string CharacterRace { get; set; }
+        public string CharacterClass { get; set; }
         
 
-        public void EnterName(string charName)
+        public void EnterName(string characterName)
         {
-            this.CharName = charName;
+            this.CharacterName = characterName;
         }
 
-        public void ChooseClass(string charClass)
+
+        public void ChooseRace(string characterRace)
         {
-            this.CharClass = charClass;
+            this.CharacterRace = characterRace;
         }
 
-        public void ChooseRace(string charRace)
+        public void ChooseClass(string characterClass)
         {
-            this.CharRace = charRace;
+            this.CharacterClass = characterClass;
         }
 
     }
